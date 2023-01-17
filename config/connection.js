@@ -3,7 +3,7 @@ const state={
     db:null
 }
 module.exports.connect = function(done){
-    const url = MONGODB_URL || 'mongodb://127.0.0.1'
+    const url = process.env.MONGODB_URL || 'mongodb://127.0.0.1'
     const dbname = 'CURD'
 
     mongoClient.connect(url,(err,data)=>{
